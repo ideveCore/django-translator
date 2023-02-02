@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'home/css/styles.css'%}" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Translator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Translator</h2>
+      <div class="row selects">
+        <div class="select">
+          <select id="from-language">
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese</option>
+            <option value="en" selected>English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="pt">Portuguese</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+        <div class="select">
+          <select id="to-language">
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="pt" selected>Portuguese</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-control">
+        <div class="card">
+          <textarea class="input" placeholder="Text..."></textarea>
+        </div>
+        <ion-icon name="arrow-forward-outline" class="rotate"></ion-icon>
+        <div class="card">
+          <textarea class="output" placeholder="Text..." readonly></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <button class="submit wk-rp">
+          <p>Translate</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="margin: auto; shape-rendering: auto"
+            width="40px"
+            height="40px"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid"
+          >
+            <path
+              fill="none"
+              stroke="#FFFFFF"
+              stroke-width="8"
+              stroke-dasharray="42.76482137044271 42.76482137044271"
+              d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+              stroke-linecap="round"
+              style="transform: scale(0.8); transform-origin: 50px 50px"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                repeatCount="indefinite"
+                dur="1s"
+                keyTimes="0;1"
+                values="0;256.58892822265625"
+              ></animate>
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{% static 'home/js/ripples.js'%}"></script>
+    <script src="{% static 'home/js/main.js'%}"></script>
+  </body>
+</html>
